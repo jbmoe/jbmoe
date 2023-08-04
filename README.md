@@ -1,16 +1,32 @@
-### Hi there 👋
+```csharp
+namespace Github;
 
-<!--
-**jbmoe/jbmoe** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+public class Profile
+{
+    public Profile()
+    {
+        Name = "Jeppe Bach Møller";
+        MotherTongue = new CultureInfo("da");
+        Location = new RegionInfo("DK");
+        CurrentJob = "Software Developer at Novicell";
+        LinkedIn = new Uri("https://www.linkedin.com/in/jeppebachmøller/");
+    }
 
-Here are some ideas to get you started:
+    public string Name { get; set; }
+    public CultureInfo MotherTongue { get; set; }
+    public RegionInfo Location { get; set; }
+    public string CurrentJob { get; set; }
+    public Uri LinkedIn { get; set; }
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+    public void DisplayGreeting()
+    {
+        Console.WriteLine($"Hello, I'm {Name}! I live in {Location} and work as a {CurrentJob}.");
+        // Hello, I'm Jeppe Bach Møller! I live in DK and work as a Software Developer at Novicell.
+    }
+
+    public void DisplayThankYou()
+    {
+        Console.WriteLine("Thank you for visiting my GitHub profile!");
+    }
+}
+```
